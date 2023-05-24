@@ -1,0 +1,223 @@
+:root {
+    --main-color: #222;
+    --bg-color: #F8F6F6;
+    --box-over-size: 800px;
+    counter-reset: feature;
+}
+p {
+    font-size: 13px;
+}
+section {
+    overflow: hidden;
+    padding: 20px 0px;
+}
+@media (min-width: 576px) {
+    p {
+        font-size: 15px;
+    }
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.9 !important;
+    counter-reset: mohamad-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+
+    background:  var(--main-color);
+}
+.title {
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+    font-weight: 400;
+}
+.title::before {
+    content: "";
+    background: red;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+.cta {
+    background: red;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    margin: 10px;
+    border-bottom: 9px;
+    width: fit-content;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Start home Section  */
+.home {
+    background: var(--main-color);
+    text-align: center;
+    color: white;
+}
+.home .wrapper {
+    display: grid;
+    align-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    min-height: 100vh;
+    gap: 15px;
+}
+.logo {
+    max-width: 120px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.main-title {
+    font-size: 24px;
+}
+.sub-main-title {
+    font-size: 14px;
+}
+.short-desc-over {
+    font-size: 12px;
+}
+.intro-svg {
+    background-color: var(--main-color);
+}
+.intro-svg path {
+    fill: white;
+}
+/* End home Section  */
+/* Whatssapp */
+.whatsapp-icon-floting {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:18px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    -webkit-box-shadow: 2px 2px 3px #999;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-float {
+    width: 33px;
+}
+.my-float path {
+    fill: white
+}
+/* Start Feature */
+.feature .feature_deatils {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+    .feature .feature_deatils {
+        flex-direction: row;
+        gap: 20px;  
+  }
+}
+
+@media (min-width: 768px) {
+    .feature .feature_deatils li:nth-child(2) {
+        margin-top: -30px;
+    }
+}
+.feature .feature_deatils li {
+    position: relative;
+}
+.feature .feature_deatils li::before {
+    counter-increment: feature;
+    content: counter(feature);
+    position: absolute;
+    top: -42px;
+    font-size: 40px;
+    color: #f3505063;
+    font-weight: bold;
+    right: 22px;
+    transform: rotate(7deg);
+}
+.feature .feature_deatils .feature__title {
+    font-weight: bold;
+}
+.feature .feature_deatils .feature__desc {
+    color: #777;
+}
+
+/* End Feature */
+/* Start clients  */
+.clients {
+    background: #eee;
+    padding: 20px 0px;
+}
+.clients ol {
+    width: fit-content;
+    margin: 30px auto;
+    padding: 10px 60px;
+    list-style: none;
+    position: relative;
+}
+.clients ol li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.clients ol svg {
+    width: 20px;
+}
+.clients ol svg path {
+    fill: #08f308;
+}
+/* End clients  */
+
+/* End products  */
+.products {
+    background: white;
+}
+/* End products  */
+footer {
+    background: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+footer .logo {
+    margin:   auto;
+
+}
